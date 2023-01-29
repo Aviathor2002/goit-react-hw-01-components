@@ -7,7 +7,8 @@ export const Conteiner = styled.div`
 `;
 
 export const Avatar = styled.img`
-  width: 400px;
+  width: 200px;
+  border-radius: 50%;
 `;
 
 export const UserInfo = styled.div`
