@@ -1,15 +1,16 @@
 import { StatItem } from './StatItem';
 import PropTypes from 'prop-types';
+import { StatisticTitle, StatisticsList } from './Statistics.styled';
 
 export const Statistics = ({ title, data }) => {
   return (
     <section>
-      {title && <h2>Upload stats</h2>}
-      <ul>
+      {title && <StatisticTitle>Upload stats</StatisticTitle>}
+      <StatisticsList>
         {data.map(item => {
           return <StatItem key={item.id} item={item} />;
         })}
-      </ul>
+      </StatisticsList>
     </section>
   );
 };

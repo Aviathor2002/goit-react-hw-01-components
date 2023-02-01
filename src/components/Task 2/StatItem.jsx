@@ -1,10 +1,17 @@
 import PropTypes from 'prop-types';
+import {
+  StatisticBox,
+  StatisticText,
+  StatisticCounter,
+} from './StatItem.styled';
 
 export const StatItem = ({ item: { label, percentage } }) => {
-  <li>
-    <span>{label}</span>
-    <span>{percentage}%</span>
-  </li>;
+  return (
+    <StatisticBox>
+      <StatisticText>{label}</StatisticText>
+      <StatisticCounter>{percentage}%</StatisticCounter>
+    </StatisticBox>
+  );
 };
 
 StatItem.propTypes = {

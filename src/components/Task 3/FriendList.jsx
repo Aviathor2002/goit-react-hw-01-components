@@ -1,17 +1,20 @@
 import { FriendListItem } from 'components/Task 3/FriendListItem';
 import PropTypes from 'prop-types';
+import { LeaderBoardProfiles } from './FriendList.styled';
 export const FriendList = ({ friends }) => {
   return (
-    <ul>
+    <LeaderBoardProfiles>
       {friends.map(({ id, avatar, name, isOnline }) => {
-        <FriendListItem
-          key={id}
-          avatar={avatar}
-          name={name}
-          isOnline={isOnline}
-        />;
+        return (
+          <FriendListItem
+            key={id}
+            avatar={avatar}
+            name={name}
+            isOnline={isOnline}
+          />
+        );
       })}
-    </ul>
+    </LeaderBoardProfiles>
   );
 };
 
